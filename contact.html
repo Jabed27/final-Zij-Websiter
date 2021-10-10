@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ZIJ</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/css/contact.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src = "httprequest/contact.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: teal;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}   
+.item1 { grid-area: header; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.column {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+::placeholder {
+  color: teal;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: teal;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: teal;
+}
+    </style>
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo"><img style="background-image: none; border-radius: 50%;background-color: black;" src="/static/images/index/logo.jpg" alt=""></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/static/index.html">Home</a></li>
+        <li><a href="/static/work.html">Works</a></li>
+        <li><a href="/static/about.html">About</a></li>
+        <li><a href="/static/register.html">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/static/index.html">Home</a></li>
+        <li><a href="/static/work.html">Works</a></li>
+        <li><a href="/static/about.html">About</a></li>
+       
+        <li><a href="/static/login.html">Login</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container grid-container">
+    <div class="item1 center">
+      <div class="col">
+        <div class="row">
+          <div class="col-sm-4">
+           <h4>Address</h4> 
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">home</i></h2>
+              <p style="font-size: 25px;color: teal;">H #5, L #7, Block #A, Halishahar, H/E Chittagong</p>
+            </div>
+            
+             
+              
+          </div>
+          <div class="col-sm-4">
+            <h4>Phone</h4> 
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">phone</i></h2>
+              
+              <p style="font-size: 25px;color: teal;">01627295521</p>
+            </div>
+             
+              
+          </div>
+          <div class="col-sm-4">
+            <h4>Email</h4> 
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">email</i></h2>
+              <p style="font-size: 25px;color: teal;">zobaidulislamjabed@gmail.com</p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-sm-12" >
+         
+            <img src="/static/images/index/contact.png" alt="Unsplashed background img 2">
+           
+            <p class="price">Send me an email</p>
+           
+        </div>
+       
+      
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="grid-container">
+    <div class="item1 center">
+     
+      <div class="container">
+        
+        <div class="row center">
+          <div class="container">
+            <div class="row center">
+                <h1>contact us</h1>
+            </div>
+            <div class="row center">
+                <h4 style="text-align:center">We'd love to hear from you!</h4>
+            </div>
+            <div class="row input-container">
+                <div class="col-xs-12">
+                  <div class="styled-input wide">
+                    <input type="text" id="Inputname" placeholder="Your name*"required />
+                    
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="styled-input">
+                    <input type="email" id="InputEmail1" placeholder="Your email*"required />
+                   
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="styled-input" style="float:right;">
+                    <input type="text" id="Inputsubject" placeholder="Subject*"required />
+                    
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="styled-input wide">
+                    <textarea id="InputMsgarea" placeholder="Just give a shout....*" required></textarea>
+                    
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <button id="post-btn" type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    
+    
+  </div>
+ 
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+      <div class="col l4 s12">
+          <h5 class="white-text">Links</h5>
+          
+        </div>
+        <div class="col l6 s8">
+          <h5 class="white-text">Let's follow</h5>
+          
+          
+           <div class="row">
+            <a href="https://www.facebook.com/jabed27"><img src="https://img.icons8.com/doodle/50/000000/facebook-new.png"/></a> 
+            <a href="https://www.youtube.com/channel/UCXv2B1P83JLNulAXz5J_Owg"><img src="https://img.icons8.com/doodle/48/000000/youtube--v1.png"/></a>
+            <a href="https://github.com/Jabed27"><img src="https://img.icons8.com/doodle/48/000000/github.png"/></a>
+            <a href="zobaidulislamjabed97"><img src="https://img.icons8.com/doodle/48/000000/instagram-new.png"/></a> 
+            <a href="https://www.linkedin.com/in/md-zobaidul-islam-jabed-2308181aa"><img src="https://img.icons8.com/doodle/48/000000/linkedin.png"/></a>
+            <a href="https://www.youtube.com/channel/UCXv2B1P83JLNulAXz5J_Owg"><img src="https://img.icons8.com/bubbles/50/000000/youtube.png"/></a>
+
+          </div>
+
+           
+           
+          
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Connect</h5>
+          
+            <div class="row">
+            
+              <a class="white-text" href="#!">  zobaidulislamjabed@gmail.com</a>
+            </div>
+           <div class="row">
+            <a class="white-text" href="#!"> </i> 01627295521</a>
+           </div>
+          
+         
+            
+            
+            
+         
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="#">ZIJ</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/js/materialize.js"></script>
+  <script src="/static/js/init.js"></script>
+
+  </body>
+</html>
